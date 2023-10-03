@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lowkya</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <div class="main">
+        <div class="ph-nav" id="myNavbar">
+           
+            <div class="navbar">
+            <ul>
+                <li><a href="#info">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#works">MY WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="info" id="info">
+            <h3>Hi, I'm <span>Lowkya</span></h3>
+            <h1><span>W</span>EB <span>D</span>ESIGNER</h1>
+            <h3>Web designer and developer from Guntur, Andhra Pradesh. 
+                I <br>create websites to do businesses do better <br>online.</h3>
+        </div>
+        <div id="about">
+            <h1>ABOUT <span>ME</span></h1>
+            <h2>Student/Beginner</h2>
+            <p>Hello,<br>My self MathurajuLowkya. I am currently pursuing "Btech" Computer science stream in 
+                <br>VIT-AP University. I am good at front end developing.
+                <br>My hobbies are Reading books,listening to music.<br>
+                My strength is to manage my work in intime. </p>
+            <a href="https://drive.google.com/file/d/1LYz3vz9R-9fmr4rd_0suL4E3Lon4YC4W/view?usp=drive_link" target="_blank" id="resume">My Resume</a>
+        </div>
+        <div id="skills">
+            <h1>SK<span>I</span>LLS</h1>
+            <p>I am pretty decent at communication skills.
+                <br>I am good at PYTHON, HTML, CSS, JAVASCRIPT.<br>
+                I can able to do front end developing for any kind of website. </p>
+            <div id="service">
+                <div id="con1">
+                <h2>Web Design</h2>
+                <p>Completed web design course from well reputed institute.<br> 
+                Done many projects on web designing.<br> 
+                Worked for few websites and good at web designing.</p>
+                </div>
+                <div id="con2">
+                <h2>PYTHON</h2>
+                <p>Completed PYTHON course from well reputed institute. 
+                Done many projects on PYTHON.
+                Worked for few programs and good at programming.</p>
+                </div>
+                <div id="con3">
+                <h2>JAVA</h2>
+                <p>Completed JAVA course from well reputed institute. 
+                Done many projects on JAVA.
+                Worked for few programs and good at programming.</p>
+                </div>
+            </div>
+        </div>
+        <div id="works">
+            <h1>M<span>Y  W</span>ORK</h1>
+            <h2>Hand Gesture control wheelchair (disabled people)</h2>
+            <p>Done this project in B TECH 2nd year with a group of 6 members.<br>
+                Designed, developed and implemented a prototype<br>
+                automation and security system as a ECS project. <br>
+                Used Python Programming for this project.</p>
+                <br>
+            <div id="intern">
+                <h2>Internships</h2>
+                <h3>Web Development</h3>
+                <br>
+                <h4>Bharat Internship</h4>
+                <p>Done this Internship virtually. <br>
+                    Enthusiastic about web technologies and committed to building responsive<br>
+                    and visually appealing websites using HTML, CSS and JavaScript. <br>
+                    Looking for an internship to refine my coding abilities and <br>
+                    contribute to impactful online projects.</p>
+            </div>
+        </div>
+        <div id="contact">
+            <h1>CON<span>T</span>ACT</h1>
+            <div class="contact-icons">
+            <a href="https://www.instagram.com/_.lowkya_mathuraju._/?next=%2F&hl=en" target="_blank"><img src="3.png" width="45px"/></a>
+            <a href="https://www.linkedin.com/in/mathuraju-lowkya-47b407257/" target="_blank"><img src="4.png" width="45px"></a>
+            <a href="https://github.com/GeetaPoladas" target="_blank"><img src="Images/github.jpg" width="45px"></a>
+        </div>
+            <p>Phone: 7207484741<br>Email: lowkyamathuraju741@gmail.com</p>
+        </div>
+        <div class="footer">
+            <p>Copyright © 2023 MathurajuLowkya. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scrolling code
+    const links = document.querySelectorAll("a[href^='#']");
+    links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const navbarHeight = document.getElementById("myNavbar").offsetHeight;
+                const offset = targetElement.getBoundingClientRect().top - navbarHeight;
+                const duration = 500; // Adjust the duration as needed
+                const startingY = window.pageYOffset;
+                const startTime = performance.now();
+                function step(time) {
+                    const currentTime = time - startTime;
+                    const progress = Math.min(currentTime / duration, 1);
+                    window.scrollTo(0, startingY + offset * progress);
+                    if (currentTime < duration) {
+                        requestAnimationFrame(step);
+                    }
+                }
+                requestAnimationFrame(step);
+            }
+        });
+    });
+    // Setting padding for .main
+    const navbarHeight = document.getElementById("myNavbar").offsetHeight;
+    document.querySelector(".main").style.paddingTop = navbarHeight + "px";
+});
+    </script>
+</body>
+</html>
